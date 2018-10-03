@@ -1,11 +1,14 @@
 package ru.timokhin.cloudHost;
 
-import javax.enterprise.inject.se.SeContainer;
-import javax.enterprise.inject.se.SeContainerInitializer;
+import ru.timokhin.cloudHost.service.system.BootstrapServiceBean;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.inject.se.SeContainerInitializer;
+@ApplicationScoped
 public class CloudApp { // точка входа
 
     public static void main(String[] args) {
-       final SeContainer container = SeContainerInitializer.newInstance().addPackages(CloudApp.class).initialize();
+        SeContainerInitializer.newInstance().addPackages(BootstrapServiceBean.class).initialize()
+                .select(BootstrapServiceBean.class).get().init();
     }
 }

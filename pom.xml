@@ -6,7 +6,7 @@
 
     <groupId>ru.adtimokhin</groupId>
     <artifactId>artifact</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0T</version>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -47,6 +47,14 @@
             <artifactId>annotations</artifactId>
             <version>RELEASE</version>
         </dependency>
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.2</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>CloudHost</finalName>
@@ -118,7 +126,7 @@
                     <artifactItems>
                         <artifactItem>
                             <groupId>ru.adtimokhin</groupId>
-                            <artifcatId>artifact</artifcatId>
+                            <artifactId>artifact</artifactId>
                             <version>1.0.0</version>
                             <type>jar</type>
                             <overWrite>true</overWrite>

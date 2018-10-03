@@ -13,8 +13,9 @@ public class KeyboardInitHandler {
     @Inject
     private Event<KeyboardCommandEvent> keyboardCommandEvent;
     /**
-     * получив {@link KeyboardInitEvent} из ... , выводится приветственное сообщение и {@link KeyboardCommandEvent} срабатывает в {@linkplain KeyboardCommandHandler}**/
-    public void init(@Observes final KeyboardInitEvent event){
+     * получив {@link KeyboardInitEvent} из {@link ru.timokhin.cloudHost.service.system.BootstrapServiceBean} , выводится приветственное сообщение и {@link KeyboardCommandEvent} срабатывает в {@linkplain KeyboardCommandHandler}**/
+
+    public void observe(@Observes final KeyboardInitEvent event){
         System.out.println();
         System.out.println("WELCOME TO COMMAND LINE INTERFACE");
         System.out.println("FOR LIST OF COMMANDS ENTER COMMAND \"help\"");
