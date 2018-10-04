@@ -2,6 +2,8 @@ package ru.timokhin.cloudHost.api.system;
 
 import org.jetbrains.annotations.NotNull;
 
+import javax.enterprise.context.ApplicationScoped;
+
 /**
  * Интерфейс для работы со значениями resources.properties. Интерфейс также имеет метод init() для инитилизации класса,
  * вызывающего данный метод

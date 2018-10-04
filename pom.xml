@@ -41,6 +41,12 @@
             <version>RELEASE</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jboss.weld.se</groupId>
+            <artifactId>weld-se</artifactId>
+            <version>2.4.8.Final</version>
+        </dependency>
+
         <!-- @NotNull, @Nullable -->
         <dependency>
             <groupId>org.jetbrains</groupId>

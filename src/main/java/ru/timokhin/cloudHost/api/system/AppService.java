@@ -10,7 +10,6 @@ import javax.jcr.Session;
 /**
  * Содержит методы для реализации базового функционала по работе с клиентской частью приложения
  **/
-@ApplicationScoped
 public interface AppService {
     void init();
 

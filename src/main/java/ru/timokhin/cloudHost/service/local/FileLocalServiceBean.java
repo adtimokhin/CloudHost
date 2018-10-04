@@ -4,8 +4,9 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import ru.timokhin.cloudHost.api.local.FileLocalService;
 
+import javax.enterprise.context.ApplicationScoped;
 import java.util.List;
-
+@ApplicationScoped
 public class FileLocalServiceBean implements FileLocalService {
     // Todo: реализовать все методы. Все есть в 3-ем уроке
     @Override

@@ -4,8 +4,9 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import ru.timokhin.cloudHost.api.remote.FileRemoteService;
 
+import javax.enterprise.context.ApplicationScoped;
 import java.util.List;
-
+@ApplicationScoped
 public class FileRemoteServiceBean implements FileRemoteService {
     // Todo: реализовать все методы. Все есть в 3-ем уроке
     @Override

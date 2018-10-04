@@ -8,7 +8,7 @@ import javax.enterprise.inject.se.SeContainerInitializer;
 public class CloudApp { // точка входа
 
     public static void main(String[] args) {
-        SeContainerInitializer.newInstance().addPackages(BootstrapServiceBean.class).initialize()
+        SeContainerInitializer.newInstance().addPackages(CloudApp.class).initialize()
                 .select(BootstrapServiceBean.class).get().init();
     }
 }

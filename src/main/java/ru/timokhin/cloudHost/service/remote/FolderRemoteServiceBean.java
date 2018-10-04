@@ -4,8 +4,9 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import ru.timokhin.cloudHost.api.remote.FolderRemoteService;
 
+import javax.enterprise.context.ApplicationScoped;
 import java.util.List;
-
+@ApplicationScoped
 public class FolderRemoteServiceBean implements FolderRemoteService{
     @Override
     public void init() {
