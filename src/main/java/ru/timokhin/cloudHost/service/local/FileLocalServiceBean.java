@@ -74,7 +74,7 @@ public class FileLocalServiceBean implements FileLocalService {
         final File root = getRoot();
         String data = (inputData == null || inputData.isEmpty()) ? " " : inputData;// возможность создавать файлы
         // без полезной нагрузки в них
-        File newFile = new File(root +"/"+ fileName); // todo: проверить создаются ли файлы корректно
+        File newFile = new File(root +"/"+ fileName);
         writeData(newFile, toByteArray(data));
         newFile.mkdirs();
 

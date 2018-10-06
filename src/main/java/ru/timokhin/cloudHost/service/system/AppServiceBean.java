@@ -63,14 +63,15 @@ public class AppServiceBean implements AppService {
     public boolean status() {
         if(repository == null)return false;
         if(session == null)return false;
-        try{
-            repository = null;
-            session = null;
-            return true;
-        }catch (Exception e){
-            error = e;
-            return false;
-        }
+//        try{
+//            repository = null;
+//            session = null;
+//            return true;
+//        }catch (Exception e){
+//            error = e;
+//            return false;
+//        }
+        return true;
     }
 
     @Override
