@@ -5,6 +5,7 @@ import org.jetbrains.annotations.Nullable;
 import ru.timokhin.cloudHost.api.remote.FileRemoteService;
 
 import javax.enterprise.context.ApplicationScoped;
+import java.io.File;
 import java.util.List;
 @ApplicationScoped
 public class FileRemoteServiceBean implements FileRemoteService {
@@ -16,12 +17,12 @@ public class FileRemoteServiceBean implements FileRemoteService {
 
     @Nullable
     @Override
-    public Byte[] readData(@Nullable String fileName) {
-        return new Byte[0];
+    public byte[] readData(@Nullable String fileName) {
+        return new byte[0];
     }
 
     @Override
-    public boolean exist(@Nullable String fileName) {
+    public boolean exists(@Nullable String fileName) {
         return false;
     }
 
@@ -31,7 +32,17 @@ public class FileRemoteServiceBean implements FileRemoteService {
     }
 
     @Override
-    public void createSimpleTxtFile(@Nullable String fileName, String inputData) {
+    public void createRootFile(@Nullable String fileName, String inputData) {
+
+    }
+
+    @Override
+    public void writeData(@Nullable File file, @Nullable byte[] data) {
+
+    }
+
+    @Override
+    public void getRootFiles() {
 
     }
 }

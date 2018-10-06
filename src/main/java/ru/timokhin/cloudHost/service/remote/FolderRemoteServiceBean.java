@@ -19,12 +19,26 @@ public class FolderRemoteServiceBean implements FolderRemoteService{
     }
 
     @Override
-    public @NotNull List<String> getListFolderNameRoot() {
-        return null;
+    public void getListNamesRoot() {
     }
 
     @Override
     public void createFolder(@Nullable String folderName) {
 
+    }
+
+    @Override
+    public boolean deleteFolder(@Nullable String folderName) {
+        return true;
+    }
+
+    @Override
+    public boolean clearRoot() {
+        return false;
+    }
+
+    @Override
+    public boolean exists(@Nullable String folderName) {
+        return false;
     }
 }

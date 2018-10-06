@@ -7,7 +7,10 @@ import java.util.List;
 
 public interface FolderService {
     @NotNull List<String> getListFolderName();
-    @NotNull List<String> getListFolderNameRoot();
+    void getListNamesRoot();
     void createFolder(@Nullable String folderName);
+    boolean deleteFolder(@Nullable String folderName);
+    boolean clearRoot();
+    boolean exists(@Nullable String folderName);
 
 }
