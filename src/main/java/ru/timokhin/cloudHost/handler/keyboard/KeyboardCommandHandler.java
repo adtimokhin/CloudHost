@@ -100,6 +100,10 @@ public class KeyboardCommandHandler {
             case LOCAL_FOLDER_EXISTS_CMD:
                 localFolderServiceCmd(2);
                 break;
+                //remote
+            case REMOTE_FILE_LIST_CMD:
+                folderRemoteService.getListNamesRoot();
+                break;
             // file delete, exists, list commands
             case LOCAL_FILE_LIST_CMD:
                 fileLocalService.getRootFiles();

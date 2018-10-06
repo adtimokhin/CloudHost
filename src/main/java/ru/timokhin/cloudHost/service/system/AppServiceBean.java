@@ -1,5 +1,6 @@
 package ru.timokhin.cloudHost.service.system;
 
+//import lombok.SneakyThrows;
 import org.apache.jackrabbit.rmi.repository.URLRemoteRepository;
 import org.jetbrains.annotations.Nullable;
 import ru.timokhin.cloudHost.api.system.AppService;
@@ -98,8 +99,17 @@ public class AppServiceBean implements AppService {
         return session;
     }
 
+
+
     @Override
     public @Nullable Node getRootNode() {
+
+        if(!status())return null;
+        try {
+            return session.getRootNode();
+        } catch (RepositoryException e) {
+            error =e;
+        }
         return null;
     }
 }

@@ -1,6 +1,6 @@
 package ru.timokhin.cloudHost.service.local;
 
-import lombok.SneakyThrows;
+//import lombok.SneakyThrows;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import ru.timokhin.cloudHost.api.local.FileLocalService;
@@ -93,7 +93,6 @@ public class FileLocalServiceBean implements FileLocalService {
         return bytes;
     }
 
-    @SneakyThrows
     public void writeData(@Nullable File file, @Nullable byte[] data) {
         if (file == null || data == null) return;
         Path path = Paths.get(file.toURI());
